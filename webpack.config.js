@@ -40,7 +40,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'www',
       filename: 'admin.html',
-      template: 'public/tpl/index.html'
+      template: 'public/tpl/index.html', // 定义生成html文件的模板
+      inject: 'head'
     })
   ]
 }
