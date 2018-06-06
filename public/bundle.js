@@ -81,10 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./app/app.js":
+/*!********************!*\
+  !*** ./app/app.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _console;\n\nvar _test = __webpack_require__(/*! ./test.js */ \"./app/test.js\");\n\nvar _test2 = _interopRequireDefault(_test);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar greeter = __webpack_require__(/*! ./greet.js */ \"./app/greet.js\");\ndocument.querySelector(\"#root\").appendChild(greeter());\n(_console = console).log.apply(_console, [1, 2, 3]);\n\n_test2.default.aa();\n_test2.default.promise().then(function (value) {\n  console.log(value);\n  console.log('promise');\n});\n\n//# sourceURL=webpack:///./app/app.js?");
+
+/***/ }),
 
 /***/ "./app/greet.js":
 /*!**********************!*\
@@ -95,18 +107,6 @@
 
 "use strict";
 eval("\n\n// Greeter.js \nmodule.exports = function () {\n  var greet = document.createElement('div');\n  greet.textContent = \"Hi there and \";\n  return greet;\n};\n\n//# sourceURL=webpack:///./app/greet.js?");
-
-/***/ }),
-
-/***/ "./app/main.js":
-/*!*********************!*\
-  !*** ./app/main.js ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nvar _console;\n\nvar _test = __webpack_require__(/*! ./test.js */ \"./app/test.js\");\n\nvar _test2 = _interopRequireDefault(_test);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar greeter = __webpack_require__(/*! ./greet.js */ \"./app/greet.js\");\ndocument.querySelector(\"#root\").appendChild(greeter());\n(_console = console).log.apply(_console, [1, 2, 3]);\n\n_test2.default.aa();\n_test2.default.promise().then(function (value) {\n  console.log(value);\n  console.log('promise');\n});\n\n//# sourceURL=webpack:///./app/main.js?");
 
 /***/ }),
 

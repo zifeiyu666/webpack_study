@@ -24,24 +24,22 @@ module.exports = {
           } 
         }, 
         exclude: /node_modules/ 
-      },
-      {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader',
-          options: {
-            attrs: [':data-src']
-          }
-        }
-      }      
+      }    
     ]
   },
   plugins: [
+    // 可以生成多个html文件
+    new HtmlWebpackPlugin(), 
     new HtmlWebpackPlugin({
-      title: 'www',
+      title: 'asd', // 当title和template同时设定的情况下，以template的title为准。
       filename: 'admin.html',
       template: 'public/tpl/index.html', // 定义生成html文件的模板
-      inject: 'head'
+      inject: 'head', // true(相当于‘body’)||'head'||'body'||false(不插入)
+      favicon: 'assets/img/fav.png', // 设置favicon路径
+      meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'}, // 设置meta
+      minify: {collapseWhitespace: false}, //html-minifier 参考https://github.com/kangax/html-minifier#options-quick-reference
+      hash: true, //添加hash
+      cache: true // 仅在文件发生变化的时候才编辑。
     })
   ]
 }
